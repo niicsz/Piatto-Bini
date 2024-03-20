@@ -1,0 +1,90 @@
+@media (max-width: 768px) {
+  /* Ajuste do menu hamburguer e do menu */
+  .navbar .menu-items {
+    transform: translateX(-100%);
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  /* Tamanho do texto do menu */
+  .navbar .menu-items li {
+    font-size: 1.4rem;
+  }
+
+  /* Ajuste do logotipo */
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1rem;
+  }
+
+  /* Layout de seção */
+  .showcase-container,
+  .about-wrapper,
+  .testimonial-container,
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajuste da imagem de fundo do showcase */
+  .showcase-area {
+    height: auto;
+    background-size: contain;
+    background-position: top;
+  }
+
+  /* Tamanho do título principal */
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  /* Ajuste do tamanho da imagem do cliente */
+  .customer-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Ajuste do tamanho das imagens de seção */
+  .about-img img,
+  .contact-img img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Ajuste do formulário */
+  .form-container {
+    width: 90%;
+  }
+}
+
+/* Dispositivos menores que 500px de largura */
+@media (max-width: 500px) {
+  /* Tamanho do texto do menu */
+  .navbar .menu-items li {
+    font-size: 1.6rem;
+  }
+
+  /* Ajuste do logotipo */
+  .logo {
+    position: absolute;
+    top: 06px;
+    right: 15px;
+    font-size: 1rem;
+  }
+
+  /* Ajuste do formulário */
+  .form-container {
+    width: 90%;
+  }
+
+  /* Ajuste do layout de seção */
+  .contact-container {
+    flex-direction: column;
+  }
+}
