@@ -587,9 +587,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .selos-container{
-    text-align: center;
-  }
   .contact-img {
     width: 90%;
     margin: 3rem auto;
