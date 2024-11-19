@@ -15,7 +15,7 @@
         .logo-font {
             font-family: 'Brush Script MT', cursive;
         }
-  </style>
+ </style>
  </head>
  <body class="bg-white text-gray-800">
   <header class="bg-white shadow-md">
@@ -23,7 +23,13 @@
     <div class="text-2xl logo-font">
      Piatto Bini
     </div>
-    <nav class="space-x-4">
+    <div class="md:hidden">
+     <button class="text-gray-800 focus:outline-none" id="menu-button">
+      <i class="fas fa-bars text-2xl">
+      </i>
+     </button>
+    </div>
+    <nav class="hidden md:flex space-x-4" id="menu">
      <a class="text-gray-800 hover:text-gray-600" href="#">
       Início
      </a>
@@ -41,6 +47,23 @@
      </a>
     </nav>
    </div>
+   <nav class="md:hidden hidden flex-col space-y-4 px-6" id="mobile-menu">
+    <a class="text-gray-800 hover:text-gray-600" href="#">
+     Início
+    </a>
+    <a class="text-gray-800 hover:text-gray-600" href="#sobre-nos">
+     Sobre
+    </a>
+    <a class="text-gray-800 hover:text-gray-600" href="Cardapio.pdf">
+     Cardápio
+    </a>
+    <a class="text-gray-800 hover:text-gray-600" href="#depoimentos">
+     Depoimentos
+    </a>
+    <a class="text-gray-800 hover:text-gray-600" href="#contato">
+     Contato
+    </a>
+   </nav>
   </header>
   <main class="container mx-auto text-center py-16 px-6">
    <h1 class="text-6xl logo-font mb-4">
@@ -156,10 +179,15 @@
     </p>
    </div>
   </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+  </script>
  </body>
 </html>
-   </div>
-  </footer>
- </body>
-</html>
-
